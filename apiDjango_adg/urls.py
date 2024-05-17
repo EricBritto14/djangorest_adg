@@ -20,9 +20,11 @@ from rest_framework import routers #Import para criar vários
 from djangoAPI.views import *
 
 router = routers.DefaultRouter()
-router.register('produtos', produtosView, basename='Produtos')
+router.register('produtosTes', produtosTeste, basename='Produtosvd')
+#router.register('Produtosofc', produtosAPIView.as_view, basename='ProdutosOFC')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include(router.urls))
+    path('', include(router.urls)),
+    path('api/', include('djangoAPI.urls'))
 ]

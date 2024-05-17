@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Produtos(models.Model):
-    nome = models.CharField(max_length=200, null=False, unique=True)
+    nome = models.CharField(max_length=200, null=False, unique=True, primary_key=True)
     tipo = models.CharField(max_length=200, null=False)
     valor = models.FloatField(max_length=200, null=False)
     quantidade = models.IntegerField(null=False)
